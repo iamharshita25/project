@@ -1,0 +1,99 @@
+@import '../../responsive.scss';
+
+.searchbar {
+    .prakkar {
+        @include sm {
+            margin-bottom: 5px;
+        }
+
+        button {
+            padding: 16px 36px;
+            border: 1px solid #999;
+            cursor: pointer;
+            text-transform: capitalize;
+            background-color: whitesmoke;
+            border-bottom: none;
+
+            &.active {
+                background-color: black;
+                color: whitesmoke;
+            }
+
+            &:first-child {
+                border-top-left-radius: 5px;
+                border-right: none;
+
+                @include sm {
+                    border-bottom: 1px solid #999;
+                }
+            }
+
+            &:last-child {
+                border-top-right-radius: 5px;
+                border-left: none;
+            }
+        }
+    }
+
+    form {
+        border: 1px solid #999;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        height: 64px;
+        gap: 5px;
+        padding: 0 10px;  /* Added padding for spacing within the form */
+
+
+        @include sm {
+            flex-direction: column;
+            border: none;
+            padding: 0;  /* Remove padding in mobile view */
+        }
+
+        input {
+            border: none;
+            padding: 0px 10px;
+            position: relative;
+            top: 9px;
+            height: 62px;
+            flex: 1;  /* Allow inputs to grow evenly */
+
+            @include large {
+                padding: 0px 5px;
+            }
+
+            @include medium {
+                padding: 0px 5px;
+            }
+
+            @include sm {
+                width: 100%;  /* Full width in mobile view */
+                padding: 20px;
+                border: 1px solid #999;
+            }
+        }
+
+        button {
+            border: none;
+            cursor: pointer;
+            background-color: rgb(247, 202, 77);
+            padding: 10px;  /* Adjusted padding for better alignment */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 42px;
+            width: 45px;
+
+            @include sm {
+                padding: 15px;
+            }
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}

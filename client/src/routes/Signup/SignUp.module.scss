@@ -1,0 +1,83 @@
+// SignUp.module.scss
+$primary-color: #ff6b6b;
+$background-color: #f5f7fa;
+$button-color: #e0d55d;
+$button-hover-color: darken($button-color, 10%);
+$text-color: #333;
+$input-background-color: #ffffff;
+
+.sign-up-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $background-color;
+  font-family: 'Arial', sans-serif;
+
+  .sign-up-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+
+    h1 {
+      margin-bottom: 20px;
+      color: $text-color;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        margin-bottom: 15px;
+        padding: 12px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: $input-background-color;
+      }
+
+      button {
+        padding: 12px;
+        background-color: $button-color;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $button-hover-color;
+        }
+      }
+    }
+
+    .sign-in-link {
+      margin-top: 15px;
+      color: $primary-color;
+
+      a {
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .illustration {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+  }
+}

@@ -1,0 +1,183 @@
+/* body {
+  background-color: #f3f0ff;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px; /* To ensure space from the navbar */
+}
+
+
+
+.profile-section form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.profile-section img {
+  border-radius: 50%;
+  border: 2px solid #eacd5a;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.profile-section input {
+    width: 95%;
+    height: 11px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+}
+
+.profile-section input:focus {
+  border-color: #eacd5a;
+  box-shadow: 0 0 3px #eacd5a;
+}
+
+.profile-section button {
+  background-color: #eacd5a;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.profile-section button:hover {
+  background-color: #eacd5a;
+}
+
+.profile-section button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.profile-section span {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.profile-section p {
+  font-size: 14px;
+  color: rgb(17, 203, 48);
+  text-align: center;
+}
+
+.profile-section p.success {
+  color: green;
+}
+
+.profile-section button + p {
+  margin-top: 1px;
+}
+
+.profile-section form input[type="file"] {
+  display: none;
+}
+
+.profile-section button.back {
+  background-color: #ddd;
+  margin-top: 10px;
+}
+
+.profile-section button.back:hover {
+  background-color: #ccc;
+}
+
+.profile-section .form-control {
+  position: relative;
+}
+
+.profile-section input::placeholder {
+  color: #999;
+}
+
+.profile-section input[type="email"]::placeholder,
+.profile-section input[type="password"]::placeholder {
+  color: green;
+}
+
+.profile-section .container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.profile-section aside {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.profile-section aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-section aside ul li {
+  margin-bottom: 10px;
+}
+
+.profile-section aside ul li a {
+  text-decoration: none;
+  color: #4b84f1;
+}
+
+.profile-section aside ul li a:hover {
+  text-decoration: underline;
+}
+/* Add this CSS for the pop-up */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 2px solid #888;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Ensure it stays on top */
+  text-align: center;
+}
+
+.popup.show {
+  display: block; /* Show pop-up when needed */
+}
+
+
+@media (max-width: 768px) {
+  .profile-section form {
+    width: 90%;
+  }
+}
+
+  

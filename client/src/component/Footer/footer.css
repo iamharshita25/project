@@ -1,0 +1,32 @@
+.footer {
+    background-color: #f1ca56;
+    padding: 40px 20px;
+    color: #aaa5a5;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo1 {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .logo1 img{
+    height: 55px;
+  }
+  
+  .footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-links li {
+    cursor: pointer;
+    font-size: 1rem;
+    color: #050505;
+  }
+  

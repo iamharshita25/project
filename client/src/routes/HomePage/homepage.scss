@@ -1,0 +1,79 @@
+@import '../../responsive.scss';
+
+
+.homepage{
+    display: flex;
+    height: 100%;
+    padding-left:  2.5rem;
+    padding-right:  0.5rem;
+    // padding-top:  1.5rem;
+
+    .textContainer{
+        flex: 3;
+
+        .wrapper{
+            padding-right: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // align-items: center;
+            gap: 50px;
+            // background-color: aquamarine;
+            height: 100%;
+            @include medium{
+                padding: 0;
+            }
+
+            @include sm{
+                justify-content: flex-start;
+            }
+
+            .title{
+                font-size: 65px;
+                @include large{
+                    font-size: 48px;
+                }
+            }
+            .Bada-Dabba{
+                display: flex;
+                justify-content: space-between;
+
+                @include sm{
+                    display: none;
+                }
+
+                h1{
+                    font-size: 30px;
+
+                    @include large{
+                        font-size: 32px;
+                    }
+                }
+                h2{
+                    font-size: 20px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+    .imgContainer{
+        flex: 2;
+        // background-color: #fcf5f3;
+        position: relative;
+        display: flex;
+        align-items: center;
+        @include medium{
+            display: none;
+        }
+
+        img{
+            width: 115%;
+            position: absolute;
+            right: 0;
+
+            @include large{
+                width: 105%;
+            }
+        }
+    }
+}

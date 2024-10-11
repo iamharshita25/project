@@ -1,0 +1,151 @@
+/* Agent.css */
+
+/* Developer Section Styling */
+.developers-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  background-color: #e1e1e1;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  font-size: 1rem;
+  color: #777;
+}
+
+.developer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.developer-card {
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-image {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-name {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-location {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.card-role {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.card-button {
+  background-color: #fbe27c;
+  color: #090909;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card-button:hover {
+  background-color: #b88e11ce;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .developer-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #e2e6e9;
+  padding: 40px 20px;
+  color: #aaa5a5;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo1 img {
+  height: 60px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-links li {
+  cursor: pointer;
+  font-size: 1rem;
+  color: #050505;
+}
+
+.footer-links li:hover {
+  text-decoration: underline;
+  transform: scale(1.07);
+}
+
+/* Responsive for Footer */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .footer-links {
+      flex-direction: row;
+      gap: 15px;
+  }
+}
+
+  
