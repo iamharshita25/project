@@ -13,7 +13,7 @@ import Pricing from "./routes/profilepage/pricing.jsx";
 import About from "./routes/About/About.jsx";
 import Agent from "./routes/Agents/Agent.jsx";
 import Updatedetails from "./component/ListProfile/Updatedetails.jsx";
-
+import ThreeJSViewer from './3d_object/3d_object/models/ThreeJSViewer.jsx'
 function App() {
   return (
     <Router>
@@ -28,10 +28,16 @@ function App() {
           <Route path="agent" element={<Agent />} />
           {/* Private Route */}
           <Route path="profile" element={
-              <PrivateRoute>
-                <Profile />
-              </PrivateRoute>
-            }
+            <PrivateRoute>
+              <Profile />
+            </PrivateRoute>
+          }
+          />
+          <Route path="3dmodel" element={
+            <PrivateRoute>
+              <ThreeJSViewer />
+            </PrivateRoute>
+          }
           />
           <Route path="profileupdate" element={
             <PrivateRoute>
@@ -50,14 +56,14 @@ function App() {
               <Pricing />
             </PrivateRoute>
           }
-          
+
           />
           <Route path="Updatedetails" element={
             <PrivateRoute>
               <Updatedetails />
             </PrivateRoute>
           }
-          
+
           />
         </Route>
       </Routes>

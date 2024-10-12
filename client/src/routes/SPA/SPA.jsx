@@ -6,7 +6,7 @@ import chat from "../../routes/SPA/chat.png"
 import house from "../../routes/SPA/pepicons-pop--house-circle.png"
 import save from "../../routes/SPA/material-symbols--bookmark-outline.png"
 import './SPA.scss'
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -24,9 +24,9 @@ function SPA() {
                                     <img src={tag} alt="" />
                                     <span>{spa_data.address}</span>
                                     <div className="buttons">
-                                    <button><img src={chat} alt="" />Send the message</button>
-                                    <button><img src={save} alt="" />Save the place</button>
-                                    <button><img src={house} alt="" />3D Model</button>
+                                    {/* <button><img src={chat} alt="" />Send the message</button>
+                                    <button><img src={save} alt="" />Save the place</button> */}
+                                        <Link to='/3dmodel' ><button><img src={house} alt="" />3D Model</button></Link>
                                 </div>
                                 </div>
                                 <div className="price">

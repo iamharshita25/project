@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/drei": "^9.114.3",
+    "@react-three/fiber": "^8.17.10",
     "@reduxjs/toolkit": "^2.2.7",
     "axios": "^1.7.7",
     "firebase": "^10.13.1",
@@ -22,7 +24,8 @@
     "redux-persist": "^6.0.0",
     "sass": "^1.77.6",
     "socket-client": "^1.0.0",
-    "socket.io-client": "^4.8.0"
+    "socket.io-client": "^4.8.0",
+    "three": "^0.169.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
