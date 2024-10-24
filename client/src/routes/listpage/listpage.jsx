@@ -1,34 +1,53 @@
-import Card from '../../component/card/Card';
-import Filter from '../../component/filter/Filter';
-import Map from '../../component/map/Map';
-import Ad from '../../component/Advertisement/Ad';
-import { data } from '../../library/homedata';
-import './listpage.scss';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
+const ListingsPage = () => {
+  const [listings, setListings] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
+  // URL of the backend API
+  const apiURL = 'http://localhost:3000/api/listing/get';
+ // Change this to your backend URL
 
+  useEffect(() => {
+    const fetchListings = async () => {
+      try {
+        const response = await axios.get(apiURL); // Fetch data from the backend
+        setListings(response.data);
+        setLoading(false);
+      } catch (err) {
+        console.error('Error fetching listings:', err);
+        setError('Failed to load listings. Please try again later.');
+        setLoading(false);
+      }
+    };
 
+    fetchListings();
+  }, [apiURL]); // Fetches when apiURL changes
 
-function Listpage() {
+  if (loading) {
+    return <div>Loading listings...</div>;
+  }
 
+  if (error) {
+    return <div>{error}</div>;
+  }
 
-    const datta = data;
-    return(
-        <div className="listpage">
-            <div className="listContainer">
-                <div className="wrapper">
-                    <Filter/>
-                    {datta.map(item=>(
-                        <Card key={item.id} item={item}/>
-                    ))}
-                </div>
-            </div>
-            <div className="mapContainer">
-                <Map items={datta}/>
-                <Ad/>
-            </div>
-        </div>
-    )
-}
+  if (listings.length === 0) {
+    return <div>No listings found.</div>;
+  }
 
-export default Listpage;
+  return (
+    <div>
+      <h1>Listings</h1>
+      <ul>
+        {listings.map((listing) => (
+          <li key={listing._id}>{listing.title}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ListingsPage;

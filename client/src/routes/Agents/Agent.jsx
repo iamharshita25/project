@@ -3,7 +3,7 @@ import './Agent.css';
 import { Link } from 'react-router-dom';
 
 
-const DeveloperCard = ({ name, location, role, profilePic, Experience }) => {
+const DeveloperCard = ({ name, location, role, profilePic, Experience, G_mail }) => {
     return (
         <div className="developer-card">
             <div className="card-image">
@@ -14,7 +14,7 @@ const DeveloperCard = ({ name, location, role, profilePic, Experience }) => {
                 <p className="card-location">{location}</p>
                 <p className="card-role">{role}</p>
                 <p className="card-role">{Experience}</p>
-                <button className="card-button">Check profile</button>
+                <button className="card-button">{G_mail}</button>
             </div>
         </div>
     );
@@ -28,6 +28,7 @@ const DevelopersSection = () => {
             role: 'Property Dealer',
             profilePic: 'src/routes/About/agent01.jpg',
             Experience: '15+ years',
+            G_mail: 'rahulgami@gmail.com',
         },
         {
             name: 'Rahul Gami',
@@ -35,6 +36,7 @@ const DevelopersSection = () => {
             role: 'PropertyDealer',
             profilePic: 'src/routes/About/agent02.jpg',
             Experience: '15+ years',
+            G_mail: 'rahulgami@gmail.com',
         },
         {
             name: 'Rahul Gami',
@@ -42,6 +44,7 @@ const DevelopersSection = () => {
             role: 'PropertyDealer',
             profilePic: 'src/routes/About/agent03.jpg',
             Experience: '15+ years',
+            G_mail: 'rahulgami@gmail.com',
         },
         {
             name: 'Rahul Gami',
@@ -49,6 +52,7 @@ const DevelopersSection = () => {
             role: 'Agent',
             profilePic: 'src/routes/About/agent02.jpg',
             Experience: '15+ years',
+            G_mail: 'rahulgami@gmail.com',
         },
         {
             name: 'Rahul Gami',
@@ -56,6 +60,7 @@ const DevelopersSection = () => {
             role: 'Agent',
             profilePic: 'src/routes/About/agent03.jpg',
             Experience: '15+ years',
+            G_mail: 'rahulgami@gmail.com',
         },
         {
             name: 'Rahul Gami',
@@ -63,6 +68,7 @@ const DevelopersSection = () => {
             role: 'Agent',
             profilePic: 'src/routes/About/agent02.jpg',
             Experience: '15+ years',
+            G_mail: 'rahulgami@gmail.com',
         },
         {
             name: 'Rahul Gami',
@@ -70,6 +76,7 @@ const DevelopersSection = () => {
             role: 'Agent',
             profilePic: 'src/routes/About/agent03.jpg',
             Experience: '15+ years',
+            G_mail: 'rahulgami@gmail.com',
         },
         {
             name: 'Rahul Gami',
@@ -77,6 +84,7 @@ const DevelopersSection = () => {
             role: 'Agent',
             profilePic: 'src/routes/About/agent02.jpg',
             Experience: '15+ years',
+            G_mail: 'rahulgami@gmail.com',
         },
     ];
 
@@ -100,6 +108,7 @@ const DevelopersSection = () => {
                             role={developer.role}
                             Experience={developer.Experience}
                             profilePic={developer.profilePic}
+                            G_mail={developer.G_mail}
                         />
                     ))}
                 </div>
