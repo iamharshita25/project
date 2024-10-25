@@ -3,8 +3,8 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { app } from '../../firebase'; // Ensure this is the correct path to your Firebase configuration
 import { useDispatch } from 'react-redux';
 import { signInSuccess } from '../../redux/user/userSlice';
-import {useNavigate} from 'react-router-dom'
-
+import { useNavigate } from 'react-router-dom'
+import './OAuth.css'
 export default function OAuth() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -42,7 +42,7 @@ export default function OAuth() {
   };
 
   return (
-    <button onClick={handleGoogleClick} type="button">
+    <button className='continuewithgoogle' onClick={handleGoogleClick} type="button">
       CONTINUE WITH GOOGLE
     </button>
   );

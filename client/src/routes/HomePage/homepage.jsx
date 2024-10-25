@@ -11,7 +11,7 @@ function homepage() {
             <div className="textContainer">
                 <div className="wrapper">
                     <h1 className='title'>Get Your Dream House </h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eum ipsam provident dolore quos numquam sapiente, commodi ab quae doloribus repellat aspernatur ducimus, rerum consequatur.</p>
+                    <p>Discover the perfect home for your family, with a wide range of properties to suit every budget and lifestyle. With over 25 years of experience, we’re committed to helping you find the property of your dreams, whether you're looking to buy, rent, or invest.</p>
                     <SearchBar/>
                     <div className="Bada-Dabba">
                         <div className="chotta-dabba">

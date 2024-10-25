@@ -13,6 +13,7 @@ import Pricing from "./routes/profilepage/pricing.jsx";
 import About from "./routes/About/About.jsx";
 import Agent from "./routes/Agents/Agent.jsx";
 import Updatedetails from "./component/ListProfile/Updatedetails.jsx";
+import ModelViewer from "./3d_object/3d_object/models/ModelViewer.jsx";
 import ThreeJSViewer from './3d_object/3d_object/models/ThreeJSViewer.jsx'
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
           />
           <Route path="3dmodel" element={
             <PrivateRoute>
-              <ThreeJSViewer />
+              <ModelViewer objPath="/models/GF.obj" />
             </PrivateRoute>
           }
           />

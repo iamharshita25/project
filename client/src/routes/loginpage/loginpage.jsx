@@ -88,7 +88,7 @@ export default function Login() {
                     <p>Dont have an account?</p>
                     <Link to="/signup">Sign up</Link>
                 </p>
-                {error && <p style={{ color: 'red' }}>{error}</p>}
+                {/* {error && <p style={{ color: 'red' }}>{error}</p>} */}
             </div>
         </div>
     );

@@ -69,6 +69,7 @@ const listingSchema = new mongoose.Schema({
     bedrooms: { type: Number },
     options: { type: String },
     imageUrls: { type: [String] },
+    Threedmodel:{type:String},
     userRef: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
 }, { timestamps: true });
 

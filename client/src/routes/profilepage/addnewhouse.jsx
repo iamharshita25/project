@@ -7,13 +7,13 @@ import {
     ref,
     uploadBytesResumable,
 } from 'firebase/storage';
-import {app} from '../../firebase'
+import { app } from '../../firebase'
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 const AddPropertyPage = () => {
     const { currentUser } = useSelector((state) => state.user);
     const navigate = useNavigate();
-    const [files,setFiles] = useState([])
+    const [files, setFiles] = useState([])
     const [formData, setFormData] = useState({
         imageUrls: [],
         name: '',
@@ -26,7 +26,7 @@ const AddPropertyPage = () => {
         options: 'renting',
         price: ''
     });
-    
+
     // console.log(files)
     const [imageUploadError, setImageUploadError] = useState(false);
     const [uploading, setUploading] = useState(false);
@@ -123,7 +123,7 @@ const AddPropertyPage = () => {
             if (data.success === false) {
                 setError(data.message);
             }
-            navigate(`/listing/${data._id}`);
+            navigate(`/spa`);
         } catch (error) {
             setError(error.message);
             setLoading(false);
@@ -143,7 +143,7 @@ const AddPropertyPage = () => {
                             id="name"
                             onChange={handleChange}
                             value={formData.name}
-                            
+
                             required
                         />
                     </div>
@@ -151,7 +151,7 @@ const AddPropertyPage = () => {
                         <label>Address</label>
                         <input
                             type="text"
-                            name="address" 
+                            name="address"
                             id="address"
                             onChange={handleChange}
                             value={formData.address}
@@ -165,7 +165,7 @@ const AddPropertyPage = () => {
                         <label>Nearby Places</label>
                         <input
                             type="text"
-                            name="nearbyPlaces" 
+                            name="nearbyPlaces"
                             id='nearbyPlaces'
                             onChange={handleChange}
                             value={formData.nearbyPlaces}
@@ -175,8 +175,8 @@ const AddPropertyPage = () => {
                         <label>Overall Area (sq ft)</label>
                         <input
                             type="number"
-                            name="area" 
-                            id="area" 
+                            name="area"
+                            id="area"
                             required
                             onChange={handleChange}
                             value={formData.area}
@@ -189,8 +189,8 @@ const AddPropertyPage = () => {
                         <label>No. of Bedrooms</label>
                         <input
                             type="number"
-                            name="bedrooms" 
-                            id="bedrooms" 
+                            name="bedrooms"
+                            id="bedrooms"
                             required
                             onChange={handleChange}
                             value={formData.bedrooms}
@@ -200,8 +200,8 @@ const AddPropertyPage = () => {
                         <label>No. of Bathrooms</label>
                         <input
                             type="number"
-                            name="bathrooms" 
-                            id="bathrooms" 
+                            name="bathrooms"
+                            id="bathrooms"
                             required
                             onChange={handleChange}
                             value={formData.bathrooms}
@@ -212,8 +212,8 @@ const AddPropertyPage = () => {
                 <div className="form-group">
                     <label>Description</label>
                     <textarea
-                        name="description" 
-                        id="description" 
+                        name="description"
+                        id="description"
                         required
                         onChange={handleChange}
                         value={formData.description}
@@ -221,8 +221,18 @@ const AddPropertyPage = () => {
                 </div>
 
                 <div className="form-row">
-                    
 
+                    <div className="form-group">
+                        <label>3d model link (if available)</label>
+                        <input
+                            type="text"
+                            name="text"
+                            id="text"
+
+                            onChange={handleChange}
+                            value={formData.batethrooms}
+                        />
+                    </div>
                     <div className="form-group">
                         <label>Options</label>
                         <div className="checkbox-group">
@@ -247,6 +257,7 @@ const AddPropertyPage = () => {
                                 Renting
                             </label>
                         </div>
+
                     </div>
                 </div>
 
@@ -269,8 +280,8 @@ const AddPropertyPage = () => {
                             multiple
                             id="images"
                             accept="image/*"
-                            onChange={(e)=>setFiles(e.target.files)}
-                            
+                            onChange={(e) => setFiles(e.target.files)}
+
                         />
                     </div>
                 </div>
