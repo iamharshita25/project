@@ -1,53 +1,70 @@
 import React, { useEffect, useState } from 'react';
+import Card from '../../component/card/Card';
+import Filter from '../../component/filter/Filter';
+import Map from '../../component/map/Map';
+import Ad from '../../component/Advertisement/Ad';
 import axios from 'axios';
+import './listpage.scss';
 
-const ListingsPage = () => {
-  const [listings, setListings] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+function Listpage() {
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-  // URL of the backend API
-  const apiURL = 'http://localhost:3000/api/listing/get';
- // Change this to your backend URL
+    // Fetch data from backend
+    useEffect(() => {
+      const fetchData = async () => {
+          try {
+              const response = await axios.get('http://localhost:3000/api/listing/get');  // Adjust API URL based on your setup
+              
+              // Log the entire response to check its structure
+              console.log('API Response:', response);
+              
+              // Assuming the correct structure is response.data.listing
+              if (response.data && response.data.listing && response.data.listing.length > 0) {
+                  setData(response.data.listing);
+              } else {
+                  setData([]);  // If the response is empty or not valid
+              }
+              setLoading(false);
+          } catch (err) {
+              console.error('Error fetching listings:', err);
+              setError('Error fetching listings');
+              setLoading(false);
+          }
+      };
+      fetchData();
+  }, []);
+  
 
-  useEffect(() => {
-    const fetchListings = async () => {
-      try {
-        const response = await axios.get(apiURL); // Fetch data from the backend
-        setListings(response.data);
-        setLoading(false);
-      } catch (err) {
-        console.error('Error fetching listings:', err);
-        setError('Failed to load listings. Please try again later.');
-        setLoading(false);
-      }
-    };
+    if (loading) {
+        return <div>Loading...</div>;
+    }
 
-    fetchListings();
-  }, [apiURL]); // Fetches when apiURL changes
+    if (error) {
+        return <div>{error}</div>;
+    }
 
-  if (loading) {
-    return <div>Loading listings...</div>;
-  }
+    return (
+        <div className="listpage">
+            <div className="listContainer">
+                <div className="wrapper">
+                    <Filter />
+                    {data.length > 0 ? (
+                        data.map(item => (
+                            <Card key={item._id} item={item} />
+                        ))
+                    ) : (
+                        <div>No listings found</div>
+                    )}
+                </div>
+            </div>
+            <div className="mapContainer">
+                <Map items={data} />
+                <Ad />
+            </div>
+        </div>
+    );
+}
 
-  if (error) {
-    return <div>{error}</div>;
-  }
-
-  if (listings.length === 0) {
-    return <div>No listings found.</div>;
-  }
-
-  return (
-    <div>
-      <h1>Listings</h1>
-      <ul>
-        {listings.map((listing) => (
-          <li key={listing._id}>{listing.title}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-export default ListingsPage;
+export default Listpage;

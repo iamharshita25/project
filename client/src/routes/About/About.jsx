@@ -48,23 +48,23 @@ const About = () => {
             </div>
             <div className="agent">
               <img src="src\routes\About\agent02.jpg" alt="Agent 2" />
-              <h3>Max Hoo</h3>
+              <h3>Max </h3>
             </div>
             <div className="agent">
               <img src="src\routes\About\agent03.jpg" alt="Agent 3" />
               <h3>Rehyan</h3>
             </div>
             <div className="agent">
-              <img src="src\routes\About\agent02.jpg" alt="Agent 2" />
-              <h3>Max Hoo</h3>
+              <img src="src\routes\About\a1.jpg" alt="Agent 2" />
+              <h3>Natasha </h3>
             </div>
             <div className="agent">
-              <img src="src\routes\About\agent03.jpg" alt="Agent 3" />
-              <h3>Rehyan</h3>
+              <img src="src\routes\About\a2.jpg" alt="Agent 3" />
+              <h3>Simran</h3>
             </div>
             <div className="agent">
-              <img src="src\routes\About\agent01.jpg" alt="Agent 1" />
-              <h3>Emir</h3>
+              <img src="src\routes\About\images.jpg" alt="Agent 1" />
+              <h3>Pratap</h3>
             </div>
           </div>
         </section>
@@ -74,29 +74,29 @@ const About = () => {
           <h2>We Bring Dream Homes To Reality</h2>
           <div className="property-cards">
             <div className="property-card">
-              <img src="src\routes\About\photo.jpg" alt="Property 1" />
-              <h3>1935 Greenview Heights</h3>
-              <p>$650,000</p>
+              <img src="src\routes\About\1i.webp" alt="Property 1" />
+              <h3>Nilambar Tenamenant</h3>
+              <p>₹50,00,000</p>
             </div>
             <div className="property-card">
-              <img src="src\routes\About\photo.jpg" alt="Property 1" />
-              <h3>1935 Greenview Heights</h3>
-              <p>$650,000</p>
+              <img src="src\routes\About\2i.jpg" alt="Property 1" />
+              <h3>Shivam duplex</h3>
+              <p>₹45,00,000</p>
             </div>
             <div className="property-card">
-              <img src="src\routes\About\photo.jpg" alt="Property 1" />
-              <h3>1935 Greenview Heights</h3>
-              <p>$650,000</p>
+              <img src="src\routes\About\3i.gif" alt="Property 1" />
+              <h3>Kanha Appartment</h3>
+              <p>₹35,00,000</p>
             </div>
             <div className="property-card">
-              <img src="src\routes\About\photo.jpg" alt="Property 1" />
-              <h3>1935 Greenview Heights</h3>
-              <p>$650,000</p>
+              <img src="src\routes\About\4i.webp" alt="Property 1" />
+              <h3>Shyan Paradise</h3>
+              <p>₹51,00,000</p>
             </div>
             <div className="property-card">
-              <img src="src\routes\About\photo.jpg" alt="Property 2" />
-              <h3>330 North Palm Drive</h3>
-              <p>$720,000</p>
+              <img src="src\routes\About\i5.jpg" alt="Property 2" />
+              <h3>Diamond Paradise</h3>
+              <p>₹60,00,000</p>
             </div>
           </div>
         </section>
